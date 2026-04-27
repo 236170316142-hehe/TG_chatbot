@@ -44,6 +44,7 @@ app.post('/chat', async (req, res) => {
 
 ### CRITICAL KNOWLEDGE:
 - **Download Link**: Users can download the TeamGrid Desktop Agent for Windows and macOS directly from: **https://www.teamgrid.ai/download**
+- **Book a Demo**: If a user wants to book a demo or see a live walkthrough, provide this link: **https://teamgrid.ai/book-demo**
 - **Core Philosophy**: TeamGrid is "Privacy-First". We DO NOT use invasive features like screenshots, screen recording, or keyloggers.
 - **Key Features**: Ask TeamGrid AI, Automatic Work Tracking, AI-Generated Summaries, Offline Mode, Auto-Pause.
 - **How to Install**: Sign up at teamgrid.ai, download the lightweight desktop agent (TeamGrid Setup 2.0.2.exe), and sign in.
