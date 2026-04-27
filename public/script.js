@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const footerDiv = document.createElement('div');
         footerDiv.className = 'agent-footer';
         footerDiv.innerHTML = `
-            <div><i class="fas fa-shield-alt"></i> Official TeamGrid AI Agent | Privacy-First Intelligence</div>
+            <div>Official TeamGrid AI Agent</div>
             <div class="support-email">Need Help? <a href="mailto:support@teamgrid.ai">support@teamgrid.ai</a></div>
         `;
         chatMessages.appendChild(footerDiv);
