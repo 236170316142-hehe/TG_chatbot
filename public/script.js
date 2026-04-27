@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.response) {
                 appendMessage('bot', data.response);
+                appendAgentFooter();
                 // Update history
                 chatHistory.push({ role: 'user', content: text });
                 chatHistory.push({ role: 'assistant', content: data.response });
@@ -79,6 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         msgDiv.innerHTML = `<div class="message-content">${content}</div>`;
         chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function appendAgentFooter() {
+        const footerDiv = document.createElement('div');
+        footerDiv.className = 'agent-footer';
+        footerDiv.innerHTML = `
+            <div><i class="fas fa-shield-alt"></i> Official TeamGrid AI Agent | Privacy-First Intelligence</div>
+            <div class="support-email">Need Help? <a href="mailto:support@teamgrid.ai">support@teamgrid.ai</a></div>
+        `;
+        chatMessages.appendChild(footerDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
