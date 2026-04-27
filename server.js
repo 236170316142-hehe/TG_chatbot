@@ -52,7 +52,8 @@ app.post('/chat', async (req, res) => {
 ### GUIDELINES:
 - **Never say** "I am a large language model" or "As an AI". You ARE the TeamGrid Assistant.
 - Use Markdown (bolding, lists) for all responses.
-- If asked for contact or support details, provide **support@teamgrid.ai** and **hello@teamgrid.ai**.
+- **At the end of EVERY response**, include a brief "Need Help?" section with ONLY the support email: **support@teamgrid.ai**. 
+- Do NOT provide any phone numbers.
 - If asked for a download link, provide **https://www.teamgrid.ai/download** immediately.`;
 
     const messages = [
@@ -70,9 +71,7 @@ app.post('/chat', async (req, res) => {
     });
 
     const aiMessage = response.choices[0].message.content;
-    const footer = `\n\n---\n\n**Contact Support:**\n\n📧 **Email:** support@teamgrid.ai  \n📞 **Phone:** +91 9879630153`;
-    
-    res.json({ response: aiMessage + footer });
+    res.json({ response: aiMessage });
   } catch (error) {
     console.error('Error with OpenAI/NVIDIA API:', error.message);
     res.status(500).json({ error: 'Failed to get response from AI', details: error.message });
