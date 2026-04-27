@@ -473,6 +473,12 @@ nav {
     opacity: 0.5;
 }
 
+.message-content h3 {
+    font-size: 1.1rem;
+    margin: 1.2rem 0 0.8rem 0;
+    color: var(--dark);
+}
+
 .message-content strong { font-weight: 700; color: inherit; }
 
 /* Responsive */
