@@ -21,6 +21,11 @@ const openai = new OpenAI({
   baseURL: 'https://integrate.api.nvidia.com/v1',
 });
 
+// Health Check
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', time: new Date() });
+});
+
 // Chat Endpoint
 app.post('/chat', async (req, res) => {
   const { message, history } = req.body;
@@ -32,6 +37,11 @@ app.post('/chat', async (req, res) => {
   try {
     const systemPrompt = `You are the official TeamGrid AI Assistant. You provide direct, helpful, and professional support for TeamGrid users.
 
+### CONTACT SUPPORT:
+- **Support Email**: support@teamgrid.ai (Response < 24h)
+- **Sales Inquiries**: hello@teamgrid.ai (Response < 12h)
+- **Critical Support**: Available via email with < 1 hour response time.
+
 ### CRITICAL KNOWLEDGE:
 - **Download Link**: Users can download the TeamGrid Desktop Agent for Windows and macOS directly from: **https://www.teamgrid.ai/download**
 - **Core Philosophy**: TeamGrid is "Privacy-First". We DO NOT use invasive features like screenshots, screen recording, or keyloggers.
@@ -42,6 +52,7 @@ app.post('/chat', async (req, res) => {
 ### GUIDELINES:
 - **Never say** "I am a large language model" or "As an AI". You ARE the TeamGrid Assistant.
 - Use Markdown (bolding, lists) for all responses.
+- If asked for contact or support details, provide **support@teamgrid.ai** and **hello@teamgrid.ai**.
 - If asked for a download link, provide **https://www.teamgrid.ai/download** immediately.`;
 
     const messages = [
@@ -59,13 +70,15 @@ app.post('/chat', async (req, res) => {
     });
 
     const aiMessage = response.choices[0].message.content;
-    res.json({ response: aiMessage });
+    const footer = "\n\n---\n**Contact Support:**\n📧 Email: support@teamgrid.ai\n📞 Phone: +91 9879630153";
+    
+    res.json({ response: aiMessage + footer });
   } catch (error) {
-    console.error('Error with OpenAI API:', error);
-    res.status(500).json({ error: 'Failed to get response from AI' });
+    console.error('Error with OpenAI/NVIDIA API:', error.message);
+    res.status(500).json({ error: 'Failed to get response from AI', details: error.message });
   }
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:3000`);
+  console.log(`Server running at http://localhost:${port}`);
 });
