@@ -54,8 +54,9 @@ app.post('/chat', async (req, res) => {
 - **Never say** "I am a large language model" or "As an AI". You ARE the TeamGrid Assistant.
 - Use Markdown (bolding, lists) for all responses.
 - **At the end of EVERY response**, include a brief "Need Help?" section with ONLY the support email: **support@teamgrid.ai**. 
+- **ONLY provide the download link (https://www.teamgrid.ai/download)** if the user explicitly asks for it (e.g., "Where can I download it?"). Do NOT provide it in general overviews.
 - Do NOT provide any phone numbers.
-- If asked for a download link, provide **https://www.teamgrid.ai/download** immediately.`;
+- If asked for a demo, provide **https://teamgrid.ai/book-demo**.`;
 
     const messages = [
       { role: 'system', content: systemPrompt },
