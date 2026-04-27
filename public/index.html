@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamGrid.ai | AI-First Workforce Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="sticky-nav">
+        <nav>
+            <div class="logo">TeamGrid<span>.ai</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-text">Sign In</a>
+                <a href="#" class="btn-outline-small">Book Demo</a>
+                <a href="#" class="btn-primary-small">Free 5-Day Trial</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-container">
+            <div class="hero-content">
+                <div class="badge">AI-FIRST WORKFORCE INTELLIGENCE</div>
+                <h1>The Future of <br><span>Remote Work</span> is AI</h1>
+                <p>TeamGrid optimizes team performance, productivity, and collaboration using advanced AI analytics and real-time workforce monitoring.</p>
+                <div class="cta-group">
+                    <a href="#" class="btn-large">Get Started Free</a>
+                    <a href="#" class="btn-outline-large">Watch Video</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>25%</strong>
+                        <span>Productivity Boost</span>
+                    </div>
+                    <div class="stat">
+                        <strong>15+</strong>
+                        <span>AI Integrations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chat-preview-card">
+                    <div class="card-header">
+                        <div class="status-dot"></div>
+                        <span>Ask TeamGrid AI</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="chat-bubble">How can I help you today?</div>
+                        <div class="chat-bubble user">Tell me about Remote Monitoring</div>
+                        <div class="chat-bubble bot">TeamGrid's **Remote Monitoring** allows you to track activities in real-time, helping you make data-driven decisions...</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="mock-input">Type your question...</div>
+                        <div class="send-icon"><i class="fas fa-paper-plane"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot UI -->
+    <div id="chat-widget-container">
+        <!-- Floating Button -->
+        <button id="chat-trigger" title="Chat with us">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="bot-name">
+                        <h3>TeamGrid Assistant</h3>
+                        <span class="online-status">Online</span>
+                    </div>
+                </div>
+                <button id="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-messages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Hi there! I'm the TeamGrid AI. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
