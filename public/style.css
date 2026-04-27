@@ -461,6 +461,13 @@ nav {
 .message-content p:last-child { margin-bottom: 0; }
 .message-content ul, .message-content ol { margin-bottom: 0.8rem; padding-left: 1.2rem; }
 .message-content li { margin-bottom: 0.4rem; }
+.message-content hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1rem 0;
+    opacity: 0.5;
+}
+
 .message-content strong { font-weight: 700; color: inherit; }
 
 /* Responsive */

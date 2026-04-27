@@ -70,7 +70,7 @@ app.post('/chat', async (req, res) => {
     });
 
     const aiMessage = response.choices[0].message.content;
-    const footer = "\n\n---\n**Contact Support:**\n📧 Email: support@teamgrid.ai\n📞 Phone: +91 9879630153";
+    const footer = `\n\n---\n\n**Contact Support:**\n\n📧 **Email:** support@teamgrid.ai  \n📞 **Phone:** +91 9879630153`;
     
     res.json({ response: aiMessage + footer });
   } catch (error) {
