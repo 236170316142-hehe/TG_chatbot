@@ -19,10 +19,10 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--bg-light);
     color: var(--dark);
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -47,7 +47,7 @@ nav {
 }
 
 .logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: -1px;
@@ -134,12 +134,12 @@ nav {
 }
 
 .hero-content h1 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.05;
     margin-bottom: 1.5rem;
-    letter-spacing: -2.5px;
+    letter-spacing: -1px;
 }
 
 .hero-content h1 span {
@@ -223,7 +223,7 @@ nav {
     align-items: center;
     gap: 10px;
     border-bottom: 1px solid var(--border);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 0.95rem;
 }
@@ -360,7 +360,7 @@ nav {
 }
 
 .bot-name h3 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
     font-weight: 700;
     margin: 0;
